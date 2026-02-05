@@ -1,0 +1,15 @@
+
+.ee-footer-links a:hover {
+    color: #198754 !important; /* Bootstrap Success Green */
+    padding-left: 5px;
+    transition: all 0.3s ease;
+}
+.grayscale {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: 0.3s;
+}
+.grayscale:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
