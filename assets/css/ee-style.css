@@ -128,7 +128,22 @@
     }
 }
 
+/* डेस्कटॉप पर माउस ले जाते ही ड्रॉपडाउन खुलेगा */
+@media (min-width: 992px) {
+    .custom-dropdown:hover > .dropdown-menu {
+        display: block !important;
+        margin-top: 0; /* गैप खत्म करने के लिए ताकि माउस हटे नहीं */
+    }
+}
 
+/* ड्रॉपडाउन एरो (तीर) को हमेशा दिखाने के लिए */
+.dropdown-toggle::after {
+    transition: transform 0.3s;
+}
+
+.custom-dropdown:hover .dropdown-toggle::after {
+    transform: rotate(180deg); /* होवर पर तीर उल्टा होगा (Premium Look) */
+}
 
 
 
@@ -427,3 +442,151 @@
 .fw-black { font-weight: 900; }
 .ls-5 { letter-spacing: 5px; }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Athlete Profile Blobs    and pro shooters and productus delais */   
+.blob-container { position: relative; width: 220px; height: 220px; margin: 0 auto; z-index: 1; }
+.athlete-img { width: 100%; height: 100%; object-fit: cover; border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; border: 4px solid #fff; position: relative; z-index: 2; transition: 0.5s; }
+.blob-animation { position: absolute; top: -10px; left: -10px; width: 110%; height: 110%; background: #ffc107; border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; z-index: 1; opacity: 0.2; animation: morph 8s linear infinite; }
+.blob-blue { background: #198754; }
+
+@keyframes morph {
+    0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+    50% { border-radius: 60% 40% 30% 70% / 50% 60% 40% 60%; }
+}
+
+/* Gear Box Styling */
+.list-group-item:hover { background: #f8f9fa; border-left: 4px solid #198754; padding-left: 1.5rem !important; transition: 0.3s; }
+.gear-box { border-top: 4px solid #198754; }
+
+/* Product Details Page Specifics */
+.most-popular-badge { position: absolute; top: -15px; right: 20px; background: #ffc107; color: #fff; padding: 10px 15px; border-radius: 50% 50% 50% 0; font-weight: 900; font-size: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.price-box { border-left: 5px solid #198754; padding-left: 15px; }
+
+/* Table Styling */
+.table thead th { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #999; border: none; }
+.table tbody td { border-bottom: 1px solid #f1f1f1; padding: 15px 10px; }
+
+/* Section Padding Utility */
+.section-padding { padding: 90px 0; }
+.fw-black { font-weight: 900; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Catalog Styles --- */
+.ls-5 { letter-spacing: 5px; }
+
+/* Sidebar menu hover */
+.catalog-side-menu a {
+    color: #444;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+    border-bottom: 1px solid #f1f1f1;
+}
+.catalog-side-menu a:hover, .active-cat {
+    color: #198754 !important;
+    padding-left: 5px;
+}
+
+/* Product Card Catalog */
+.product-card-catalog {
+    transition: all 0.4s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.cat-img-box {
+    position: relative;
+    padding: 20px;
+    background: #fff;
+    overflow: hidden;
+}
+.cat-img-box img {
+    transition: transform 0.6s ease;
+}
+
+/* Hover Overlay on Image */
+.hover-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(25, 135, 84, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.product-card-catalog:hover .hover-overlay { opacity: 1; }
+.product-card-catalog:hover img { transform: scale(1.1); }
+.product-card-catalog:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important; }
+
+/* Sticky Sidebar Fix for Navbar height */
+.sidebar-sticky {
+    position: sticky;
+    top: 100px;
+}
+
+/* Badge Styling */
+.z-index-1 { z-index: 1; }
+
+
+
+
+/* --- Catalog Multi-level Hover Effect --- */
+@media (min-width: 992px) {
+    /* माउस ले जाते ही मेनू खुलेगा */
+    .custom-dropdown:hover > .dropdown-menu {
+        display: block !important;
+        margin-top: 0;
+    }
+
+    /* सब-मेनू (Bows, Arrows आदि) को दाईं तरफ खोलने के लिए */
+    .dropend:hover > .dropdown-menu {
+        display: block !important;
+        position: absolute;
+        left: 100%; /* दाईं तरफ खिसकाने के लिए */
+        top: 0;
+        margin-top: -5px;
+        margin-left: 0;
+        border-radius: 0 8px 8px 8px;
+    }
+}
+
+/* मोबाइल पर टच इफ़ेक्ट के लिए */
+.dropdown-item.dropdown-toggle::after {
+    float: right;
+    margin-top: 8px;
+}
