@@ -590,3 +590,89 @@
     float: right;
     margin-top: 8px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Explore Range Section Styling */
+.explore-range-section {
+    background: #0f1215; /* Dark Base */
+    background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); /* Subtle Texture */
+    border-top: 4px solid #198754; /* Green border on top */
+}
+
+.range-bg-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, rgba(25, 135, 84, 0.1) 0%, rgba(0,0,0,0.8) 100%);
+}
+
+.range-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.range-card:hover {
+    transform: translateY(-10px);
+    background: rgba(25, 135, 84, 0.05);
+    border-color: #198754;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.range-emoji {
+    font-size: 3.5rem;
+    display: block;
+    filter: drop-shadow(0 0 10px rgba(25, 135, 84, 0.5));
+}
+
+.range-card h3 {
+    letter-spacing: 2px;
+}
+
+/* Button Glow Effect */
+.btn-glow {
+    box-shadow: 0 0 15px rgba(25, 135, 84, 0.4);
+    transition: 0.3s;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 25px rgba(25, 135, 84, 0.7);
+    transform: scale(1.05);
+}
+
+.btn-hover-fill:hover {
+    background-color: #198754;
+    color: white !important;
+}
+
+/* Animations for emoji/icon */
+.range-card:hover .range-emoji {
+    animation: pulse-green 1.5s infinite;
+}
+
+@keyframes pulse-green {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}

@@ -1,6 +1,9 @@
 
 
 
+
+
+
 <footer class="ee-footer bg-dark text-white pt-5 pb-3 mt-5">
     <div class="container">
         <div class="row g-4">
@@ -9,27 +12,24 @@
             <div class="col-lg-4 col-md-6">
                 <h5 class="text-uppercase fw-bold mb-4 border-bottom border-success border-3 pb-2 d-inline-block">Eagle Eye Archery</h5>
                 <p class="small text-secondary mb-3">
-                    Eagle Eye Archery Private Limited is a premier company dedicated to the importation and distribution of the world's leading Archery brands within the Indian territory.
-                </p>
-                <p class="small text-secondary">
-                    Our mission is simple: working together to ensure every archery shop and professional in India has access to the finest equipment needed for success.
+                    Eagle Eye Archery Private Limited is a company engaged in the import and distribution of top international brands and Made-in-India archery equipment across the Indian market.
                 </p>
                 <p class="small text-warning mt-2 italic">
-                    <i class="fas fa-info-circle me-1"></i> (*) Product prices will be charged on invoice (CGST/SGST/IGST).
+                    <i class="fas fa-info-circle me-1"></i> (*) Product prices will be charged as per invoice and are exclusive of applicable taxes (CGST / SGST / IGST).
                 </p>
             </div>
 
-            <!-- Column 2: Quick Links -->
-            <div class="col-lg-2 col-md-6 ms-lg-auto">
+            <!-- Column 2: Quick Links (Ye links pehle gayab the) -->
+            <div class="col-lg-3 col-md-6 ms-lg-auto">
                 <h5 class="text-uppercase fw-bold mb-4 border-bottom border-success border-3 pb-2 d-inline-block">Navigate</h5>
                 <ul class="list-unstyled ee-footer-links">
                     <li class="mb-2"><a href="index.html" class="text-secondary text-decoration-none small hover-success">Home Page</a></li>
-                    <li class="mb-2"><a href="services.html" class="text-secondary text-decoration-none small">Our Services</a></li>
-                    <li class="mb-2"><a href="catalog/index.html" class="text-secondary text-decoration-none small">Product Catalog</a></li>
-                    <li class="mb-2"><a href="pro-shooters.html" class="text-secondary text-decoration-none small">Pro Shooters</a></li>
-                    <li class="mb-2"><a href="contact-us.html" class="text-secondary text-decoration-none small">Contact Us</a></li>
-                    <li class="mb-2"><a href="privacy-policy.html" class="text-secondary text-decoration-none small">Privacy Policy</a></li>
-                    <li class="mb-2"><a href="terms-conditions.html" class="text-secondary text-decoration-none small">Shipping & Costs</a></li>
+                    <li class="mb-2"><a href="services.html" class="text-secondary text-decoration-none small hover-success">Our Services</a></li>
+                    <li class="mb-2"><a href="catalog/index.html" class="text-secondary text-decoration-none small hover-success">Product Catalog</a></li>
+                    <li class="mb-2"><a href="pro-shooters.html" class="text-secondary text-decoration-none small hover-success">Pro Shooters</a></li>
+                    <li class="mb-2"><a href="contact-us.html" class="text-secondary text-decoration-none small hover-success">Contact Us</a></li>
+                    <li class="mb-2"><a href="privacy-policy.html" class="text-secondary text-decoration-none small hover-success">Privacy Policy</a></li>
+                    <li class="mb-2"><a href="terms-conditions.html" class="text-secondary text-decoration-none small hover-success">Terms & Conditions</a></li>
                 </ul>
             </div>
 
@@ -40,14 +40,14 @@
                     <i class="fas fa-map-marker-alt text-success mt-1 me-3"></i>
                     <p class="small text-secondary mb-0">
                         <strong>Address:</strong><br>
-                        New Delhi - 1100XX, INDIA
+                        Kurukshetra - INDIA
                     </p>
                 </div>
                 <div class="d-flex mb-3">
                     <i class="fas fa-phone-alt text-success mt-1 me-3"></i>
                     <p class="small text-secondary mb-0">
                         <strong>Phone:</strong><br>
-                        +91 888 2184131 / 011 45589982
+                        +91 9569236411
                     </p>
                 </div>
                 <div class="d-flex mb-3">
@@ -57,12 +57,11 @@
                         info@egaleeyearchery.com
                     </p>
                 </div>
-                <!-- Social Media Icons -->
+                <!-- Social Icons -->
                 <div class="mt-4">
                     <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2"><i class="fab fa-instagram"></i></a>
                     <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
 
@@ -79,28 +78,33 @@
             </div>
             <div class="col-md-6 text-center text-md-end">
                 <p class="small text-secondary mb-0">
-                    Powered by <a href="#" class="text-success text-decoration-none fw-bold">Eagle Eye Tech</a>
+                    Kurukshetra, Haryana, India
                 </p>
             </div>
         </div>
     </div>
 
     <!-- Back to Top Button -->
-    <a href="#" class="ee-back-to-top position-fixed bottom-0 end-0 m-4 btn btn-success rounded-circle shadow" id="backToTop" style="display: none; width: 45px; height: 45px; line-height: 32px;">
+    <a href="#" class="ee-back-to-top position-fixed bottom-0 end-0 m-4 btn btn-success rounded-circle shadow" id="backToTop" style="display: none; width: 45px; height: 45px; line-height: 32px; z-index: 1000;">
         <i class="fas fa-chevron-up"></i>
     </a>
 </footer>
 
 <script>
     // Update year automatically
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    try {
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    } catch(e) {}
 
     // Show/Hide Back to Top button
     window.onscroll = function() {
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            document.getElementById('backToTop').style.display = "block";
-        } else {
-            document.getElementById('backToTop').style.display = "none";
+        let btn = document.getElementById('backToTop');
+        if (btn) {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
         }
     };
 </script>
