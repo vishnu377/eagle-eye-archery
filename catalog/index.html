@@ -1,196 +1,361 @@
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Catalog | Eagle Eye Archery India</title>
     
-    <!-- PRIMARY SEO -->
-    <title>Archery Equipment Catalog | Eagle Eye Archery India</title>
-    <meta name="description" content="Explore our complete catalog of professional bows, arrows, and accessories. Premium gear for every archer by Eagle Eye Archery Private Limited.">
-    <link rel="canonical" href="https://egaleeyearchery.com/catalog/" />
-
-    <!-- SCHEMA MARKUP (Google CollectionPage Schema) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Archery Equipment Catalog",
-      "url": "https://egaleeyearchery.com/catalog/",
-      "description": "Comprehensive catalog of professional bows, arrows, and archery accessories from top global brands.",
-      "mainEntity": {
-        "@type": "ItemList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Compound Bows" },
-          { "@type": "ListItem", "position": 2, "name": "Target Arrows" }
-        ]
-      }
-    }
-    </script>
-
-    <!-- CSS (Paths corrected with ../) -->
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- CSS Paths -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="../assets/css/ee-style.css">
+    <link rel="stylesheet" href="/assets/css/ee-style.css">
+    
+    <style>
+      
+
+
+
+
+
+        /* Premium Catalog Hero Styling */
+.catalog-hero-premium {
+    background: #0b0d0f; /* Dark base */
+    padding: 100px 0;
+    position: relative;
+    border-bottom: 3px solid #198754;
+}
+
+.hero-bg-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        radial-gradient(circle at 80% 20%, rgba(25, 135, 84, 0.15) 0%, transparent 40%),
+        linear-gradient(rgba(11, 13, 15, 0.8), rgba(11, 13, 15, 0.8)),
+        url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); /* Pattern background */
+}
+
+.premium-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(25, 135, 84, 0.1);
+    border: 1px solid rgba(25, 135, 84, 0.3);
+    color: #198754;
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.pulse-icon {
+    width: 8px; height: 8px;
+    background: #198754;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+    box-shadow: 0 0 0 rgba(25, 135, 84, 0.4);
+    animation: pulse-green 2s infinite;
+}
+
+.text-success-glow {
+    color: #198754;
+    text-shadow: 0 0 20px rgba(25, 135, 84, 0.5);
+}
+
+/* Floating Animation for Image */
+.floating-bow-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-floating-img {
+    filter: drop-shadow(0 20px 50px rgba(0,0,0,0.8));
+    animation: float-bow 5s ease-in-out infinite;
+}
+
+.glow-circle {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(25, 135, 84, 0.2) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+@keyframes float-bow {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes pulse-green {
+    0% { box-shadow: 0 0 0 0 rgba(25, 135, 84, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(25, 135, 84, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(25, 135, 84, 0); }
+}
+
+.min-vh-60 { min-height: 60vh; }
+.ls-tight { letter-spacing: -1px; }
+        .category-card-new {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid #eee;
+            height: 100%;
+            text-decoration: none !important;
+            display: block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+        }
+
+        .category-card-new:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: #198754;
+        }
+
+        .img-container {
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background: #fdfdfd;
+            transition: 0.4s;
+        }
+
+        .category-card-new:hover .img-container {
+            background: #f0fdf4; /* Light green on hover */
+        }
+
+        .img-container img {
+            max-height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .category-card-new:hover .img-container img {
+            transform: scale(1.1);
+        }
+
+        .card-details {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card-details h4 {
+            font-weight: 800;
+            color: #222;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-details p {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .btn-view {
+            display: inline-block;
+            padding: 8px 25px;
+            background: #198754;
+            color: #fff;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .category-card-new:hover .btn-view {
+            background: #000;
+            padding: 8px 35px;
+        }
+
+        .section-tag {
+            color: #198754;
+            font-weight: bold;
+            letter-spacing: 3px;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body class="bg-light">
 
-    <!-- Header Placeholder -->
     <div id="header-placeholder"></div>
+<!-- ELITE HERO SECTION -->
+<section class="catalog-hero-premium overflow-hidden">
+    <div class="hero-bg-overlay"></div>
+    <div class="container position-relative">
+        <div class="row align-items-center min-vh-60">
+            
+            <!-- Left Side: Typography -->
+            <div class="col-lg-7 text-start" data-aos="fade-right" data-aos-duration="1200">
+                <div class="premium-badge mb-3">
+                    <span class="pulse-icon"></span>
+                    Authorized Importer
+                </div>
+                <h1 class="display-2 fw-black text-white text-uppercase ls-tight mb-3">
+                    Elite <span class="text-success-glow">Catalog</span>
+                </h1>
+                <p class="lead text-light opacity-75 mb-4 pe-lg-5">
+                    Experience the pinnacle of precision. Explore a curated selection of the world's most advanced archery equipment for professional athletes.
+                </p>
+                <div class="hero-stats d-flex gap-4">
+                    <div>
+                        <h4 class="fw-bold mb-0">50+</h4>
+                        <small class="text-success fw-bold text-uppercase ls-1">Brands</small>
+                    </div>
+                    <div class="vr bg-secondary opacity-25"></div>
+                    <div>
+                        <h4 class="fw-bold mb-0">100%</h4>
+                        <small class="text-success fw-bold text-uppercase ls-1">Genuine</small>
+                    </div>
+                </div>
+            </div>
 
-    <!-- MAIN CATALOG HERO -->
-    <section class="catalog-header text-center text-white py-5" style="background: linear-gradient(rgba(25,135,84,0.9), rgba(0,0,0,0.85)), url('../assets/images/about/about-bg.jpg') center/cover fixed;">
-        <div class="container py-4">
-            <h1 class="display-3 fw-black text-uppercase mb-2" data-aos="fade-down">Product Catalog</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center text-uppercase fw-bold small">
-                    <li class="breadcrumb-item"><a href="../index.html" class="text-white text-decoration-none opacity-75">Home</a></li>
-                    <li class="breadcrumb-item active text-warning" aria-current="page">Catalog</li>
-                </ol>
-            </nav>
+            <!-- Right Side: Floating Visual -->
+            <div class="col-lg-5 d-none d-lg-block position-relative" data-aos="zoom-in" data-aos-delay="300">
+                <div class="floating-bow-wrapper">
+                    <!-- Is image link ko aap apne kisi acche bow PNG se replace kar sakte hain -->
+                    <img src="https://www.mychoicearchery.com/imghandler.ashx?imagepath=~/Foto/Prodotti/25294/xceed2_green_20250829163424.561.jpg" 
+                         class="img-fluid hero-floating-img" alt="Professional Bow">
+                    <div class="glow-circle"></div>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
+   
 
-    <!-- CATALOG CONTENT SECTION -->
+    <!-- GRID SECTION -->
     <section class="py-5">
-        <div class="container">
+        <div class="container py-4">
             <div class="row g-4">
                 
-                <!-- SIDEBAR: FILTERS -->
-                <div class="col-lg-3">
-                    <div class="sidebar-sticky shadow-sm p-4 bg-white rounded-4 border-top border-success border-4" data-aos="fade-right">
-                        <h5 class="fw-bold mb-4 d-flex justify-content-between">
-                            <span>FILTERS</span>
-                            <i class="fas fa-sliders-h text-muted"></i>
-                        </h5>
-
-                        <div class="filter-group mb-4">
-                            <label class="fw-bold small text-muted text-uppercase mb-3 d-block">Categories</label>
-                            <ul class="list-unstyled catalog-side-menu">
-                                <li><a href="bows.html" class="d-flex justify-content-between py-2 active-cat">Bows <i class="fas fa-chevron-right small mt-1"></i></a></li>
-                                <li><a href="arrows.html" class="d-flex justify-content-between py-2">Arrows <i class="fas fa-chevron-right small mt-1"></i></a></li>
-                                <li><a href="accessories.html" class="d-flex justify-content-between py-2">Accessories <i class="fas fa-chevron-right small mt-1"></i></a></li>
-                                <li><a href="targetscase.html" class="d-flex justify-content-between py-2">Targets & Cases <i class="fas fa-chevron-right small mt-1"></i></a></li>
-                            </ul>
+                <!-- 1. BOWS -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <a href="/catalog/compound.html" class="category-card-new">
+                        <div class="img-container">
+                            <img src="https://www.mychoicearchery.com/imghandler.ashx?imagepath=~/Foto/Prodotti/25294/xceed2_green_20250829163424.561.jpg" alt="Bows">
                         </div>
-
-                        <div class="filter-group mb-4">
-                            <label class="fw-bold small text-muted text-uppercase mb-3 d-block">Filter By Price</label>
-                            <input type="range" class="form-range" id="priceRange">
-                            <div class="d-flex justify-content-between small text-muted mt-2">
-                                <span>₹1,000</span>
-                                <span>₹2,00,000</span>
-                            </div>
+                        <div class="card-details">
+                            <h4>Bows</h4>
+                            <p>Compound, Recurve & Beginner Sets</p>
+                            <span class="btn-view">VIEW ALL</span>
                         </div>
-
-                        <button class="btn btn-dark w-100 rounded-pill fw-bold py-2 mt-3">CLEAR ALL</button>
-                    </div>
+                    </a>
                 </div>
 
-                <!-- MAIN GRID: PRODUCTS -->
-                <div class="col-lg-9">
-                    <!-- Top Toolbar -->
-                    <div class="d-flex justify-content-between align-items-center mb-4 bg-white p-3 shadow-sm rounded-3" data-aos="fade-up">
-                        <p class="mb-0 small text-muted">Showing all <strong>15</strong> results</p>
-                        <div class="d-flex align-items-center">
-                            <span class="small text-muted me-2">Sort By:</span>
-                            <select class="form-select form-select-sm border-0 bg-light fw-bold" style="width: 160px;">
-                                <option>Newest Arrivals</option>
-                                <option>Price: Low to High</option>
-                                <option>Popularity</option>
-                            </select>
+                <!-- 2. ARROWS -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <a href="/catalog/arrows.html" class="category-card-new">
+                        <div class="img-container">
+                            <img src="https://www.mychoicearchery.com/imghandler.ashx?imagepath=~/Foto/Prodotti/10516/Easton_Vane_X10_Composite_20191102203317.328.png" alt="Arrows">
                         </div>
-                    </div>
-
-                    <!-- Products Grid -->
-                    <div class="row g-4">
-                        
-                        <!-- Product Card 1 -->
-                        <div class="col-md-4 col-sm-6" data-aos="fade-up">
-                            <div class="card product-card-catalog border-0 shadow-sm h-100 position-relative">
-                                <div class="badge bg-danger position-absolute top-0 end-0 m-3 z-index-1">NEW</div>
-                                <div class="cat-img-box">
-                                    <img src="https://www.mychoicearchery.com/thumbnail.ashx?ImgSrc=~/Foto/Prodotti/10531/SUTRA-RTX-40-Black.jpg&width=400" class="card-img-top" alt="Bow">
-                                    <div class="hover-overlay">
-                                        <a href="product-details.html" class="btn btn-light rounded-pill fw-bold small">QUICK VIEW</a>
-                                    </div>
-                                </div>
-                                <div class="card-body p-4 text-center">
-                                    <p class="small text-muted text-uppercase fw-bold mb-1">PSE Archery</p>
-                                    <h6 class="fw-bold text-dark mb-3">SUPRA RTX 40 SE</h6>
-                                    <div class="h5 fw-black text-success">₹99,000</div>
-                                    <a href="product-details.html" class="btn btn-outline-dark btn-sm rounded-pill w-100 mt-3 fw-bold">DETAILS</a>
-                                </div>
-                            </div>
+                        <div class="card-details">
+                            <h4>Arrows</h4>
+                            <p>Shafts, Points, Nocks & Vanes</p>
+                            <span class="btn-view">VIEW ALL</span>
                         </div>
-
-                        <!-- Card 2 -->
-                        <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-                            <div class="card product-card-catalog border-0 shadow-sm h-100 position-relative">
-                                <div class="cat-img-box">
-                                    <img src="https://www.mychoicearchery.com/thumbnail.ashx?ImgSrc=~/Foto/Prodotti/10508/X-LIDE-Nero.jpg&width=400" class="card-img-top" alt="Gear">
-                                    <div class="hover-overlay">
-                                        <a href="product-details.html" class="btn btn-light rounded-pill fw-bold small">QUICK VIEW</a>
-                                    </div>
-                                </div>
-                                <div class="card-body p-4 text-center">
-                                    <p class="small text-muted text-uppercase fw-bold mb-1">Beiter</p>
-                                    <h6 class="fw-bold text-dark mb-3">V-LOCK SYSTEM</h6>
-                                    <div class="h5 fw-black text-success">₹12,500</div>
-                                    <a href="product-details.html" class="btn btn-outline-dark btn-sm rounded-pill w-100 mt-3 fw-bold">DETAILS</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- इसी तरह और 6-9 प्रोडक्ट्स कार्ड जोड़ें -->
-
-                    </div>
+                    </a>
                 </div>
+
+                <!-- 3. ARCHER GEAR -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <a href="/catalog/accessories-archers.html" class="category-card-new">
+                        <div class="img-container">
+                            <img src="https://www.mychoicearchery.com/imghandler.ashx?imagepath=~/Foto/Prodotti/22324/OMEGA%20MINI%20BLACK_20220624095609.082.jpg" alt="Archer Accessories">
+                        </div>
+                        <div class="card-details">
+                            <h4>Archer Gear</h4>
+                            <p>Quivers, Releases & Personal Safety</p>
+                            <span class="btn-view">VIEW ALL</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 4. BOW ACCESSORIES -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <a href="/catalog/accessories-bows.html" class="category-card-new">
+                        <div class="img-container">
+                            <img src="https://www.mychoicearchery.com/imghandler.ashx?imagepath=~/Foto/Prodotti/25281/SR_green_20250829151701.814.jpg&height=400&crop=false&valign=Middle&halign=Center" alt="Bow Accessories">
+                        </div>
+                        <div class="card-details">
+                            <h4>Bow Accessories</h4>
+                            <p>Sights, Stabilizers & Tuning</p>
+                            <span class="btn-view">VIEW ALL</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 5. CASES -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <a href="/catalog/cases.html" class="category-card-new">
+                        <div class="img-container">
+                            <img src="https://www.mychoicearchery.com/imghandler.ashx?imagepath=~/Foto/Prodotti/19285/SI_20200801_1718092_20200802122409.118.JPG" alt="Cases">
+                        </div>
+                        <div class="card-details">
+                            <h4>Protection</h4>
+                            <p>Heavy Duty Bow Cases & Bags</p>
+                            <span class="btn-view">VIEW ALL</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 6. TARGETS -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <a href="/catalog/targets.html" class="category-card-new">
+                        <div class="img-container">
+                            <img src="https://www.mychoicearchery.com/imghandler.ashx?imagepath=~/Foto/Prodotti/25614/youyi80cmtarget_20250917124528.058.jpg" alt="Targets">
+                        </div>
+                        <div class="card-details">
+                            <h4>Targets</h4>
+                            <p>Faces, Butts & Practice Gear</p>
+                            <span class="btn-view">VIEW ALL</span>
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- FOOTER PLACEHOLDER -->
+    <!-- TRUST SECTION -->
+    <section class="py-5 bg-white">
+        <div class="container text-center">
+            <h2 class="fw-black mb-5">Authorized Partner</h2>
+            <div class="row g-4 opacity-50">
+                <div class="col-4 col-md-2"><img src="https://www.mychoicearchery.com/Foto/Produttori/1/Hoyt-logo_20190204113815.148.png" class="img-fluid grayscale" style="max-height: 30px;"></div>
+                <div class="col-4 col-md-2"><img src="https://www.mychoicearchery.com/Foto/Produttori/6/Logo-Easton_20190204113641.197.png" class="img-fluid grayscale" style="max-height: 30px;"></div>
+                <div class="col-4 col-md-2"><img src="https://www.mychoicearchery.com/Foto/Produttori/15/VANGUARD%20LOGO_20230624132127.123.png" class="img-fluid grayscale" style="max-height: 30px;"></div>
+                <div class="col-4 col-md-2"><img src="https://www.mychoicearchery.com/Foto/Produttori/11/logo_sanlida_20230624132228.156.png" class="img-fluid grayscale" style="max-height: 30px;"></div>
+                <div class="col-4 col-md-2"><img src="https://www.mychoicearchery.com/Foto/Produttori/8/SHIBUYA%20LOGO_20230624132615.505.png" class="img-fluid grayscale" style="max-height: 30px;"></div>
+                <div class="col-4 col-md-2"><img src="https://www.mychoicearchery.com/Foto/Produttori/4/logo_beiter_rgb-2016_20181127153836.691.png" class="img-fluid grayscale" style="max-height: 30px;"></div>
+            </div>
+        </div>
+    </section>
+
     <div id="footer-placeholder"></div>
 
-    <!-- SCRIPTS (Paths corrected) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        $(function(){
-            // ../ path is important here
-            $("#header-placeholder").load("../components/header.html");
-            $("#footer-placeholder").load("../components/footer.html");
-        });
         AOS.init({ duration: 800, once: true });
-    </script>
-
-    <script>
-    $(function(){
-        // फोल्डर के अंदर से हेडर लोड करना
-        $("#header-placeholder").load("../components/header.html", function() {
-            
-            // Catalog लिंक का लॉजिक
-            const catalogBtn = document.getElementById('catalogMainLink');
-            if (catalogBtn) {
-                catalogBtn.addEventListener('click', function() {
-                    // चूँकि आप पहले से कैटलॉग फोल्डर में हैं, तो बस index.html लोड करें
-                    window.location.href = "index.html"; 
-                });
-            }
-
-            // Contacts लिंक का लॉजिक
-            const contactBtn = document.getElementById('contactsLink');
-            if (contactBtn) {
-                contactBtn.addEventListener('click', function() {
-                    window.location.href = "./contact-us.html"; // एक कदम बाहर निकलकर कांटेक्ट पेज पर जाना
-                });
-            }
+        $(function(){
+            $("#header-placeholder").load("/components/header.html");
+            $("#footer-placeholder").load("/components/footer.html");
         });
-        
-        $("#footer-placeholder").load("../components/footer.html");
-    });
-</script>
+    </script>
 </body>
 </html>
