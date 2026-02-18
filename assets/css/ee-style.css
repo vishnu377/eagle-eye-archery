@@ -357,7 +357,7 @@
 .service-hero-premium {
     height: 400px;
     background: linear-gradient(rgba(25, 135, 84, 0.8), rgba(10, 50, 30, 0.9)), 
-                url('https://www.mychoicearchery.com/Foto/Slideshow/22/newproducts_20200709130746.358.jpg') center/cover fixed;
+                url('/assets/images/products/new-arrivals.jpg') center/cover fixed;
     position: relative;
 }
 
@@ -860,3 +860,158 @@
     .search-wrapper { width: 100%; margin-top: 15px; }
     .ee-search-box:focus-within { width: 100%; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   ULTRA RESPONSIVE FIXES (For Mobile & Tablets)
+   ============================================================ */
+
+/* 1. Mobile Typography & Spacing */
+@media (max-width: 767px) {
+    .section-padding { 
+        padding: 50px 0 !important; /* Mobile par padding kam ki taaki user thake nahi */
+    }
+    
+    h1.display-1, h1.display-2 { 
+        font-size: 2.5rem !important; /* Bade headers ko mobile size kiya */
+        letter-spacing: 2px !important;
+    }
+
+    h2.display-3, h2.display-4 {
+        font-size: 2rem !important;
+    }
+
+    .section-title { 
+        font-size: 1.5rem !important; 
+    }
+
+    /* Slider Height adjustment for mobile */
+    #heroSlider, .carousel-item {
+        height: 60vh !important;
+    }
+}
+
+/* 2. Catalog & Product Grid Mobile Fix */
+@media (max-width: 575px) {
+    /* Product images ko mobile par adjust karna */
+    .product-card-catalog .cat-img-box {
+        padding: 10px;
+    }
+    
+    .product-card-catalog img {
+        max-height: 150px;
+        object-fit: contain;
+    }
+
+    /* Variant Table ko mobile par readable banana */
+    .table-variant {
+        font-size: 11px !important;
+    }
+    
+    .table-variant img {
+        width: 30px !important;
+    }
+
+    /* Buttons mobile par full width */
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* 3. Sidebar Fix (Mobile par sidebar content ke upar bahut jagah leta hai) */
+@media (max-width: 991px) {
+    .sidebar-sticky {
+        position: static !important;
+        margin-bottom: 30px;
+    }
+    
+    .catalog-side-menu {
+        display: flex;
+        overflow-x: auto; /* Mobile par menu slide ho jayega sideways */
+        white-space: nowrap;
+        padding-bottom: 10px;
+        gap: 10px;
+    }
+
+    .catalog-side-menu li {
+        border: 1px solid #eee;
+        border-radius: 50px;
+        padding: 5px 15px;
+    }
+    
+    .catalog-side-menu li a {
+        border-bottom: none !important;
+        padding: 0 !important;
+    }
+}
+
+/* 4. Navbar Logo Adjustment */
+@media (max-width: 991px) {
+    .nav-logo {
+        height: 50px !important; /* Mobile par logo chota kiya */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
