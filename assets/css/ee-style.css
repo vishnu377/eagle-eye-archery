@@ -2,6 +2,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 /* GLOBAL SPACING */
 .section-padding { padding: 90px 0 !important; }
 
@@ -1015,3 +1024,108 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- HORIZONTAL SCROLL FIX (Mobile Hilna Band) --- */
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    position: relative;
+}
+
+/* Bootstrap Row Fix (Negative margin ki wajah se aksar hilta hai) */
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+/* Ensure images don't push the screen */
+img {
+    max-width: 100%;
+    height: auto;
+}
